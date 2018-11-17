@@ -42,7 +42,7 @@ module.exports = {
   output: {
     path: buildPath,
     filename: `files/main${nameSuffix}.js`,
-    publicPath: argv.production ? packageJson.name : '/',
+    publicPath: argv.production ? `/${packageJson.name}` : '/',
     pathinfo: false
   },
   resolve: {
