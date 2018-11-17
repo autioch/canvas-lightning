@@ -7,7 +7,7 @@ export default function render(ctx, config) {
   const halfWidth = Math.floor(config.WIDTH * HALF);
 
   /* Reset canvas. */
-  ctx.fillStyle = config.BACKGROUND;
+  ctx.fillStyle = config.COLOR_BG;
   ctx.fillRect(0, 0, config.WIDTH, config.HEIGHT);
 
   /* Setup starting point. */

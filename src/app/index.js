@@ -8,8 +8,10 @@ export default function lightning(canvas, startingConfig = {}) {
   const ctx = canvas.getContext('2d');
 
   ctx.lineWidth = config.LINE_WIDTH;
-  ctx.strokeStyle = config.COLOR;
+  ctx.strokeStyle = config.COLOR_LIGHT;
   ctx.lineJoin = config.LINE_JOIN;
+  ctx.shadowColor = config.COLOR_BLUR;
+  ctx.shadowBlur = config.LINE_BLUR;
 
   let currentFrame = 0;
   let timeout;

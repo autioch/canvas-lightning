@@ -7,9 +7,11 @@ const DEFAULT_CONFIG = {
   MAX_Y: 10,
   LOOP_INTERVAL: 100,
   LINE_WIDTH: 3,
+  LINE_BLUR: 10,
   LINE_JOIN: 'miter',
-  COLOR: '#FF0',
-  BACKGROUND: '#000',
+  COLOR_LIGHT: '#fff',
+  COLOR_BLUR: '#0ff',
+  COLOR_BG: '#000',
   CACHE_COUNT: 10,
   WIDTH: 2,
   HEIGHT: 2
