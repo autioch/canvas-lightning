@@ -2,8 +2,7 @@
 
 const DEFAULT_CONFIG = {
   MIN_X: 1,
-  MAX_X: 100,
-  RANGE_X: 100,
+  MAX_X: 10,
   MIN_Y: 2,
   MAX_Y: 10,
   LOOP_INTERVAL: 100,

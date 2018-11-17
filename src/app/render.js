@@ -10,15 +10,12 @@ export default function render(ctx, config) {
   ctx.fillStyle = config.BACKGROUND;
   ctx.fillRect(0, 0, config.WIDTH, config.HEIGHT);
 
-  /* For debugging, display line in the middle of the canvas. */
-  ctx.fillStyle = '#f00';
-  ctx.fillRect(halfWidth - HALF, 0, 1, config.HEIGHT);
-
   /* Setup starting point. */
   ctx.beginPath();
   ctx.moveTo(halfWidth, 0);
   let currentVertical = 0;
 
+  /* Keep rendering until bottom of canvas is reached. */
   while (currentVertical < config.HEIGHT) {
     const horizontalMove = randomRange(config.MIN_X, config.MAX_X);
     const verticaMove = randomRange(config.MIN_Y, config.MAX_Y);
