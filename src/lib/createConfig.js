@@ -11,7 +11,10 @@ const DEFAULT_CONFIG = {
   LINE_JOIN: 'miter',
   COLOR_LIGHT: '#fff',
   COLOR_BLUR: '#0ff',
+
   COLOR_BG: '#000',
+
+  // COLOR_BG: 'transparent',
   CACHE_COUNT: 10,
   WIDTH: 2,
   HEIGHT: 2

@@ -26,7 +26,7 @@ export default function canvasLightning(canvas, startingConfig = {}) {
        * Drawing transparent rect will not clear the canvas, so we have to be more tricky. */
       ctx.save();
       ctx.globalCompositeOperation = 'copy';
-      ctx.fillStyle = 'rgba(0,0,0,0)';
+      ctx.fillStyle = config.COLOR_BG;
       ctx.fillRect(0, 0, config.WIDTH, config.HEIGHT);
       ctx.restore();
 

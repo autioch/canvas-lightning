@@ -165,7 +165,10 @@ var DEFAULT_CONFIG = {
   LINE_JOIN: 'miter',
   COLOR_LIGHT: '#fff',
   COLOR_BLUR: '#0ff',
+
   COLOR_BG: '#000',
+
+  // COLOR_BG: 'transparent',
   CACHE_COUNT: 10,
   WIDTH: 2,
   HEIGHT: 2
@@ -238,14 +241,12 @@ function canvasLightning(canvas) {
       /* Reset canvas.
        * Drawing transparent rect will not clear the canvas, so we have to be more tricky. */
       ctx.save();
-
       ctx.globalCompositeOperation = 'copy';
-
-      // ctx.globalCompositeOperation = 'destination-out';
-      ctx.fillStyle = 'rgba(0,0,0,0)';
+      ctx.fillStyle = config.COLOR_BG;
       ctx.fillRect(0, 0, config.WIDTH, config.HEIGHT);
       ctx.restore();
 
+      /* As an optimization, at some point start reusing existing images. */
       var cachedImage = cache.get(currentFrame);
 
       if (cachedImage) {
