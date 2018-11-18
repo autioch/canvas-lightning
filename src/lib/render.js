@@ -6,10 +6,6 @@ const randomDirection = () => Math.random() > HALF ? 1 : -1; // eslint-disable-l
 export default function render(ctx, config) {
   const halfWidth = Math.floor(config.WIDTH * HALF);
 
-  /* Reset canvas. */
-  ctx.fillStyle = config.COLOR_BG;
-  ctx.fillRect(0, 0, config.WIDTH, config.HEIGHT);
-
   /* Setup starting point. */
   ctx.beginPath();
   ctx.moveTo(halfWidth, 0);
